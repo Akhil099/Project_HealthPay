@@ -22,6 +22,22 @@ I have used strategy design pattern to use the same method to extract the conten
 
 I have saved the documents for parsing in a local storage that can be found out in the same Project_HealthPay folder under uploaded_files folder
 
+Architecture & Logic
+
+1. User uploads 1–5 PDF files via REST API.
+    
+2. Files are saved locally in `/uploaded_files/`.
+   
+3. Each PDF is split into pages.
+   
+4. Each page is classified into one of: hospital bill, insurance form, discharge summary, or ID.
+ 
+5. Based on classification, an appropriate extraction strategy is used (Strategy Design Pattern).
+   
+6. Relevant page content is extracted using Gemini via LangChain.
+   
+7. Final structured output is returned in JSON format
+
 The Tech Stack that I have used is:
 
 -> Python 3.11
