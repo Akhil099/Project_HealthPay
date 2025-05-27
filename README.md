@@ -1,10 +1,16 @@
 I was given the task of building a FASTAPI based web service that processes uploaded medical insurance PDF documents and discards any pictures that are uploaded. It extracts structured claim details such as hospital names, billed amounts, diagnoses, and admission/discharge dates using Gemini LLM model and classifies the data by pages
 
 The features that I have included are :
+
+
 -> Accepts multiple PDF files for batch claim processing
+
 -> Uses LangChain and Gemini (Google Generative AI) for intelligent extraction
+
 -> Supports hospital bill formats, insurance forms, and more
+
 -> Exposes REST endpoints with Swagger UI documentation
+
 -> Securely loads environment variables using .env
 
 As I was assigned the task of only building the backend service, so I have tested my service on FASTAPI docs feature that allows us to test our REST API endpoints. It accepts multiple pdf files and according gives decision on the claims on the documents that are submitted in the pdf
@@ -17,11 +23,17 @@ I have used strategy design pattern to use the same method to extract the conten
 I have saved the documents for parsing in a local storage that can be found out in the same Project_HealthPay folder under uploaded_files folder
 
 The Tech Stack that I have used is:
+
 -> Python 3.11
+
 -> FastAPI + Uvicorn
+
 -> PyMuPDF (fitz) for PDF parsing
+
 -> LangChain + Gemini (langchain-google-genai)
+
 -> dotenv for configuration
+
 -> Docker for containerization
 
 Project Structure:
