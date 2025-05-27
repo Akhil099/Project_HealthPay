@@ -71,6 +71,44 @@ and to run the application, you need to run the command :
 The Environment variables that i have used is a Gemini Api Key
 
 
+The Sample Output is as follows:
+
+{
+  "message": "Files processed successfully",
+  "results": [
+    {
+      "type": "bill",
+      "hospital_name": null,
+      "grand_total": 426051,
+      "date_of_service": "2025-02-02"
+    },
+    
+    {  "type": "discharge_summary",
+      "patient_name": "Mr. KOSGI   VISHNUVARDHAN",
+      "diagnosis": "ACL RECONSTRUCTION",
+      "admission_date": "01-Feb-2025",
+      "discharge_date": "02-Feb-2025"
+    },
+    {
+      "type": "insurance_form",
+      "claimNumber": "25013102111",
+      "claim_submission": "submitted"
+    }
+  ],
+  "validation": {
+    "missing_documents": 
+    ["id"],
+    "missing_details": ["bill_hospital_name"]
+  },
+  "claim_decision": {
+    "status": "pending",
+    "reason": "all documents are not present or data inconsistency"
+  }
+}
+
+
+
+
 
 
 
